@@ -12,61 +12,77 @@ Python
 
 ## Project Tasks
 
-### 1. Data Quality Check
-- **Objective**: Create a Data Pre-processing pipeline to ensure the dataset is ready for analysis.
+### 1. Dataset Analysis
+- **Objective**: Identify the type of each dataset and determine possible tasks.
 - **Steps**:
-  - Clean and preprocess the data.
-  - Confirm the data quality and record the data shape.
-  - Includes necessary comments and justifications throughout the process.
+  - **Dataset Type Identification**:
+    - Determine if the dataset is Linear/NonLinear and Single/Multilabel.
+    - Identify whether the tasks possible are Classification or Regression.
+  - **Justification**:
+    - **Variable Type Inspection**: Examine the dataset and report on the types of variables based on domain knowledge.
+    - **Exploratory Analysis**: Perform at least one exploratory analysis technique (e.g., descriptive statistics, visualizations).
+    - **Inferential Analysis**: Conduct one inferential analysis technique (e.g., hypothesis testing, confidence intervals).
+    - **Predictive Analysis**: Apply one predictive analysis technique (e.g., regression model, classification algorithm).
 
-### 2. Data Relationship/Distribution Analysis
-- **Objective**: Understand the distribution and relationships within the data.
+### 2. Application of Loss Functions
+- **Objective**: Apply various loss functions to appropriate datasets and compare their effectiveness.
 - **Steps**:
-  - Provide a Frequency table and plot to visualize Pickup counts by gender.
-  - Provide Frequency tables and plots to visualize the distribution of Daily Average Minutes.
-  - Analyze the relationship between:
-    - Participant’s age and their Response time on singleton visual search.
-    - Participant’s gender and their Response time on conjunction visual search.
+  - **Loss Function Application**:
+    - Apply the following loss functions as applicable:
+      - L1 loss
+      - L2 loss
+      - Log loss
+      - Categorical cross-entropy loss
+      - Hinge loss
+  - **Comparison**:
+    - Create visual plots to compare the performance of different loss functions where applicable.
 
-### 3. Correlation Check
-- **Objective**: Examine relationships between variables.
+### 3. Metric Assessment
+- **Objective**: Evaluate model performance using appropriate metrics.
 - **Steps**:
-  - Produce a bivariate correlation table between Age, STAI, BRIEF_Total, DailyAvgMins, and VS_RT_correct_Single.
+  - **Metrics Evaluation**:
+    - For Classification: Use metrics such as accuracy, precision, recall, F1 score, confusion matrix.
+    - For Regression: Use metrics such as R² score, Mean Absolute Error (MAE), Mean Squared Error (MSE).
+  - **Documentation**:
+    - Record and interpret the metrics for each dataset.
 
-### 4. Linear Regression
-- **Objective**: Assess if the minutes a person uses their mobile device per day predicts their visual search reaction time.
+### 4. Non-Linear Dataset Transformation
+- **Objective**: Transform a non-linear dataset to linear space and assess model performance.
 - **Steps**:
-  - Perform a linear regression analysis.
+  - **Kernel Transformation**:
+    - Choose a non-linear dataset and apply a kernel transformation to linear space (e.g., Polynomial Kernel, Radial Basis Function).
+  - **Model Fitting**:
+    - Fit a model to the transformed data and evaluate its accuracy.
 
-### 5. Multiple Regression
-- **Objective**: Evaluate the combined effect of multiple predictors on the outcome.
-- **Steps**:
-  - Add predictors (Age, Gender, Number of device pickups, etc.) to the regression model.
-  - Determine if the variance accounted for in the outcome increases and if daily minutes of mbile usage remains a significant predictor.
-
-### 6. Scenario 1 Analysis
-- **Objective**: Test a hypothesis related to mobile usage and visual search performance.
+### 5. Regression Overfitting Analysis
+- **Objective**: Create and analyze overfitting scenarios in regression.
 - **Scenario**:
-  - Participants were grouped by age and mobile usage.
-  - They were asked to locate a target (red apple) among distractors (blue apples), and their reaction times were recorded.
-- **Steps**:
-  - Group participants and choose an appropriate Omnibus test statistic to test the hypothesis.
-  - Justify the choice of test.
-  - List assumptions and corresponding statistical tests.
-  - Check and validate assumptions with visual charts.
-  - Apply follow-on tests to identify specific effects.
+  - **Overfitting Creation**:
+    - Adjust feature subsets or training dataset size to create overfitting conditions.
+  - **Evidence**:
+    - Use metrics and plots to demonstrate overfitting.
+  - **Regularization**:
+    - Apply two regularization methods (e.g., L1 regularization, L2 regularization) and evaluate model performance before and after regularization.
 
-### 7. Scenario 2 Analysis
-- **Objective**: Test a hypothesis using a transformed dataset.
+### 6. Classification Overfitting Analysis
+- **Objective**: Create and analyze overfitting scenarios in classification.
 - **Scenario**:
-  - Participants were asked to locate a target (red apple) among different distractors before and after a brain training exercise.
-  - Their mobile usage was recorded and categorized.
+  - **Overfitting Creation**:
+    - Adjust feature subsets or training dataset size to create overfitting conditions.
+  - **Evidence**:
+    - Use metrics and plots to demonstrate overfitting.
+  - **Regularization**:
+    - Apply two regularization methods (e.g., Dropout, L2 regularization) and evaluate model performance before and after regularization.
+
+### 7. Decision Tree Analysis
+- **Objective**: Apply Decision Tree models to specific datasets.
 - **Steps**:
-  - Create groups and choose an appropriate Omnibus test statistic to test the hypothesis.
-  - Justify the choice of test.
-  - List assumptions and corresponding statistical tests.
-  - Check and validate assumptions with visual charts.
-  - Apply follow-on tests to identify specific effects.
+  - **Decision Tree Application**:
+    - Apply a Decision Tree model to the following datasets:
+      - MASTER_PhonesmartdataAll_CCI_AdvStats.csv
+      - wine dataset
+  - **Pruning**:
+    - Apply pruning techniques to the Decision Tree models and record observations.
 
 ## Instructions for Running the Analysis
 
