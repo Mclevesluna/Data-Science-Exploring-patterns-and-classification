@@ -129,7 +129,6 @@ from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor, export_t
 from sklearn.metrics import accuracy_score, mean_squared_error
 from mlxtend.plotting import plot_decision_regions
 from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC![image](https://github.com/user-attachments/assets/9370ee22-3e8f-435e-8a80-b328b0e98e51)
-
+from sklearn.svm import SVC
 3. **Run the Analysis**:
     Open the Jupyter notebook and run the cells to execute the analysis.
